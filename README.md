@@ -21,9 +21,9 @@ Normalization is a database design technique that reduces data redundancy and el
 CREATE TABLE Majors (
     Major VARCHAR(50) PRIMARY KEY,
     Advisor VARCHAR(100) NOT NULL
-);
+);```
 
-Table Description
+### Table Description
 describe Majors;
 Result
 +---------+-----------+
@@ -38,8 +38,7 @@ Result
 
 **SQL QUERY:**
 
-
-mysql> CREATE TABLE Students (
+```
     ->     StudentID VARCHAR(10) PRIMARY KEY,
     ->     Name VARCHAR(100) NOT NULL,
     ->     Email VARCHAR(100) UNIQUE NOT NULL,
@@ -47,7 +46,7 @@ mysql> CREATE TABLE Students (
     ->     FOREIGN KEY (Major) REFERENCES Majors(Major)
     -> );
 Query OK, 0 rows affected (0.04 sec)
-
+```
 ###Table Description
 
 describe Student;
@@ -65,7 +64,7 @@ Result
 ### 1.  Courses Table (CourseID, CourseTitle, Credits, Building, Room)
 
 **SQL QUERY:**
-mysql> CREATE TABLE Courses (
+ CREATE TABLE Courses (
     ->     CourseID VARCHAR(10) PRIMARY KEY,
     ->     CourseTitle VARCHAR(100) NOT NULL,
     ->     Credits INT NOT NULL,
