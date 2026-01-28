@@ -23,7 +23,7 @@ CREATE TABLE Majors (
     Advisor VARCHAR(100) NOT NULL
 );
 
-###Table Description
+Table Description
 describe Majors;
 Result
 +---------+-----------+
@@ -35,6 +35,7 @@ Result
 2 rows in set (0.00 sec)
 
 ### 1. Student Table (StudentID, Name Email Major)
+
 **SQL QUERY:**
 
 
@@ -48,6 +49,7 @@ mysql> CREATE TABLE Students (
 Query OK, 0 rows affected (0.04 sec)
 
 ###Table Description
+
 describe Student;
 Result
 
@@ -61,6 +63,7 @@ Result
 3 rows in set (0.00 sec)
 
 ### 1.  Courses Table (CourseID, CourseTitle, Credits, Building, Room)
+
 **SQL QUERY:**
 mysql> CREATE TABLE Courses (
     ->     CourseID VARCHAR(10) PRIMARY KEY,
@@ -72,6 +75,7 @@ mysql> CREATE TABLE Courses (
 Query OK, 0 rows affected (0.04 sec)
 
 ###Table Description
+
 describe Course;
 Result
 +----------+----------------+---------+-----------+------+
@@ -84,6 +88,7 @@ Result
 3 rows in set (0.00 sec)
 
 ### 1. Enrollments Table (StudentID, CourseID, Grade)
+
 **SQL QUERY:**
 
 mysql> CREATE TABLE Enrollments (
@@ -96,6 +101,7 @@ mysql> CREATE TABLE Enrollments (
     -> );
 
 ###Table Description
+
 describe Enrollments;
 Result
 
@@ -128,6 +134,7 @@ mysql> SELECT
     -> JOIN Courses c ON e.CourseID = c.CourseID;
 
 ###Final Description
+
 describe -Final Verification  ;
 Result 
 +-----------+-------+---------+-----------+----------------+-------+-----------+------+
