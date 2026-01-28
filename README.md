@@ -37,7 +37,7 @@ Result
 2 rows in set (0.00 sec)
 ```
 
-### 1. Student Table (StudentID, Name Email Major)
+### 2. Student Table (StudentID, Name Email Major)
 
 **SQL QUERY:**
 
@@ -65,7 +65,7 @@ Result
 3 rows in set (0.00 sec)
 ```
 
-### 1.  Courses Table (CourseID, CourseTitle, Credits, Building, Room)
+### 3.  Courses Table (CourseID, CourseTitle, Credits, Building, Room)
 
 **SQL QUERY:**
 ```sql
@@ -91,7 +91,7 @@ Result
 +----------+----------------+---------+-----------+------+
 3 rows in set (0.00 sec)
 ```
-### 1. Enrollments Table (StudentID, CourseID, Grade)
+### 4. Enrollments Table (StudentID, CourseID, Grade)
 
 **SQL QUERY:**
 ```sql
@@ -122,7 +122,7 @@ Result
 4 rows in set (0.00 sec)
 ```
 
-### 1. Data Verification (Final Output)
+### 5. Data Verification (Final Output)
 **SQL QUERY:**
 ```sql
 mysql> SELECT
