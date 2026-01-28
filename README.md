@@ -24,6 +24,8 @@ CREATE TABLE Majors (
 );```
 
 ### Table Description
+
+```sql
 describe Majors;
 Result
 +---------+-----------+
@@ -33,12 +35,13 @@ Result
 | Physics | Dr. Lee   |
 +---------+-----------+
 2 rows in set (0.00 sec)
+```
 
 ### 1. Student Table (StudentID, Name Email Major)
 
 **SQL QUERY:**
 
-```
+```sql
     ->     StudentID VARCHAR(10) PRIMARY KEY,
     ->     Name VARCHAR(100) NOT NULL,
     ->     Email VARCHAR(100) UNIQUE NOT NULL,
@@ -48,7 +51,7 @@ Result
 Query OK, 0 rows affected (0.04 sec)
 ```
 ###Table Description
-
+```sql
 describe Student;
 Result
 
@@ -60,10 +63,12 @@ Result
 | S103      | Carol | carol@uni.edu | Physics |
 +-----------+-------+---------------+---------+
 3 rows in set (0.00 sec)
+```
 
 ### 1.  Courses Table (CourseID, CourseTitle, Credits, Building, Room)
 
 **SQL QUERY:**
+```sql
  CREATE TABLE Courses (
     ->     CourseID VARCHAR(10) PRIMARY KEY,
     ->     CourseTitle VARCHAR(100) NOT NULL,
@@ -72,9 +77,9 @@ Result
     ->     Room VARCHAR(10)
     -> );
 Query OK, 0 rows affected (0.04 sec)
-
-###Table Description
-
+```
+### Table Description
+```sql
 describe Course;
 Result
 +----------+----------------+---------+-----------+------+
@@ -85,11 +90,11 @@ Result
 | PHYS101  | Mechanics      |       4 | Science   | 301  |
 +----------+----------------+---------+-----------+------+
 3 rows in set (0.00 sec)
-
+```
 ### 1. Enrollments Table (StudentID, CourseID, Grade)
 
 **SQL QUERY:**
-
+```sql
 mysql> CREATE TABLE Enrollments (
     ->     StudentID VARCHAR(10),
     ->     CourseID VARCHAR(10),
@@ -98,9 +103,10 @@ mysql> CREATE TABLE Enrollments (
     ->     FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
     ->     FOREIGN KEY (CourseID) REFERENCES Courses(CourseID)
     -> );
+```
 
-###Table Description
-
+### Table Description
+```sql
 describe Enrollments;
 Result
 
@@ -114,10 +120,11 @@ Result
 | S103      | PHYS101  | A     |
 +-----------+----------+-------+
 4 rows in set (0.00 sec)
+```
 
 ### 1. Data Verification (Final Output)
 **SQL QUERY:**
-
+```sql
 mysql> SELECT
     ->     s.StudentID,
     ->     s.Name,
@@ -131,9 +138,9 @@ mysql> SELECT
     -> JOIN Majors m ON s.Major = m.Major
     -> JOIN Enrollments e ON s.StudentID = e.StudentID
     -> JOIN Courses c ON e.CourseID = c.CourseID;
-
-###Final Description
-
+```
+### Final Description
+```sql
 describe -Final Verification  ;
 Result 
 +-----------+-------+---------+-----------+----------------+-------+-----------+------+
@@ -145,3 +152,4 @@ Result
 | S103      | Carol | Physics | Dr. Lee   | Mechanics      | A     | Science   | 301  |
 +-----------+-------+---------+-----------+----------------+-------+-----------+------+
 4 rows in set (0.00 sec)
+```
